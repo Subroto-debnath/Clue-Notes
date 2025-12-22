@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.build/
+.vite/
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+coverage/
+.idea/
+.vscode/
+/.turbo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+dist/
+
+# macOS
+.DS_Store
+
+# Lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

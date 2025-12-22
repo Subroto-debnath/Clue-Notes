@@ -1,0 +1,15 @@
+body { font-family: system-ui, sans-serif; margin:0; padding:0; }
+.app { padding: 12px; max-width: 900px; margin: 0 auto; }
+.topbar { display:flex; justify-content:space-between; align-items:center; }
+.players-bar { display:flex; gap:8px; margin:8px 0; overflow:auto; }
+.player-pill { background:#eee; padding:6px 10px; border-radius:16px; font-size:14px; }
+.actions { display:flex; gap:8px; margin:8px 0; }
+.cards-list { margin-top:12px; }
+.grid { display:grid; grid-template-columns: repeat(2,1fr); gap:8px; }
+.card-tile { background: #fafafa; border:1px solid #ddd; padding:8px; border-radius:8px; }
+.card-name { font-weight:600; }
+.badge { background:#ddd; padding:2px 6px; border-radius:6px; margin-right:6px; font-size:12px; }
+.badge.green { background:#7fe08a; color:#063; }
+.modal { position:fixed; inset:0; background:rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; }
+.modal-content { background:white; padding:12px; border-radius:8px; width:95%; max-width:600px; max-height:80vh; overflow:auto; }
+.response-row { display:flex; gap:8px; align-items:center; margin:6px 0; }
