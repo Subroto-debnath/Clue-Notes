@@ -1,15 +1,47 @@
-body { font-family: system-ui, sans-serif; margin:0; padding:0; }
-.app { padding: 12px; max-width: 900px; margin: 0 auto; }
-.topbar { display:flex; justify-content:space-between; align-items:center; }
-.players-bar { display:flex; gap:8px; margin:8px 0; overflow:auto; }
-.player-pill { background:#eee; padding:6px 10px; border-radius:16px; font-size:14px; }
+body { font-family: system-ui, sans-serif; margin:0; padding:0; -webkit-font-smoothing:antialiased; background:#fafafa; color:#111 }
+.app { padding: 14px; max-width: 980px; margin: 0 auto; }
+.topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:8px 0 }
+.title { font-size:20px; margin:0 }
+.restart-btn { padding:8px 10px; border-radius:10px; border:1px solid #f3a6a6; background: #fff5f5; color:#b91c1c; font-weight:700 }
+.restart-btn:hover { background:#ffecec }
+.players-bar { display:flex; gap:8px; margin:8px 0; overflow:auto; -webkit-overflow-scrolling:touch }
+.player-pill { background:#fff; padding:8px 12px; border-radius:20px; font-size:14px; box-shadow:0 1px 0 rgba(0,0,0,0.05); border:1px solid #eee }
 .actions { display:flex; gap:8px; margin:8px 0; }
 .cards-list { margin-top:12px; }
-.grid { display:grid; grid-template-columns: repeat(2,1fr); gap:8px; }
-.card-tile { background: #fafafa; border:1px solid #ddd; padding:8px; border-radius:8px; }
-.card-name { font-weight:600; }
-.badge { background:#ddd; padding:2px 6px; border-radius:6px; margin-right:6px; font-size:12px; }
+.grid { display:grid; grid-template-columns: repeat(2,1fr); gap:10px; }
+.card-tile { background: #fff; border:1px solid #e6e6e6; padding:12px; border-radius:12px; box-shadow:0 6px 14px rgba(6,8,15,0.03); min-height:84px; display:flex; flex-direction:column; justify-content:space-between }
+.card-name { font-weight:700; font-size:16px }
+.badge { background:#efefef; padding:4px 8px; border-radius:8px; margin-right:6px; font-size:12px; }
 .badge.green { background:#7fe08a; color:#063; }
-.modal { position:fixed; inset:0; background:rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; }
-.modal-content { background:white; padding:12px; border-radius:8px; width:95%; max-width:600px; max-height:80vh; overflow:auto; }
-.response-row { display:flex; gap:8px; align-items:center; margin:6px 0; }
+.modal { position:fixed; inset:0; background:rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; padding:16px }
+.modal-content { background:white; padding:16px; border-radius:12px; width:100%; max-width:700px; max-height:90vh; overflow:auto; box-shadow:0 10px 30px rgba(0,0,0,0.12) }
+.response-row { display:flex; gap:8px; align-items:center; margin:6px 0; flex-wrap:wrap }
+
+.actions-bottom { position:fixed; left:0; right:0; bottom:0; display:flex; gap:8px; padding:10px; background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff); box-shadow:0 -6px 20px rgba(0,0,0,0.06); justify-content:space-around }
+.actions-bottom button, .actions button { padding:12px 14px; border-radius:10px; font-size:15px; background:#fff; border:1px solid #e6e6e6; box-shadow:0 2px 8px rgba(0,0,0,0.04) }
+.actions-bottom button.primary, .actions button.primary { background:#2563eb; color:white; border-color:transparent }
+
+.card-done { background: #ff4d4d; color: white; border-color: #e63737; }
+.card-done .card-name { font-weight:800 }
+.prob-list { margin-top:8px; font-size:13px; color: #333; display:flex; flex-direction:column }
+.card-done .prob-list { color: rgba(255,255,255,0.95); }
+.prob-line { margin:2px 0; display:flex; justify-content:space-between }
+.prob-line span:first-child { opacity:0.9 }
+.certain-row { margin-top:8px; font-weight:700; }
+
+.control { width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6e6e6; margin:8px 0; font-size:15px }
+.btn { padding:10px 14px; border-radius:8px; border:1px solid #e6e6e6; background:#fff }
+.btn.primary { background:#2563eb; color:#fff; border-color:transparent }
+
+@media (max-width: 640px) {
+	.grid { grid-template-columns: 1fr; }
+	.card-tile { padding:14px; min-height:88px }
+	.title { font-size:18px }
+	.modal-content { height:100%; border-radius:12px }
+	.actions { display:none }
+	.actions-bottom { display:flex }
+}
+
+@media (min-width: 641px) {
+	.actions-bottom { display:none }
+}
