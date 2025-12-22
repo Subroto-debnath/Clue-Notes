@@ -44,20 +44,23 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <h1 className="title">Clue Notes</h1>
-        <button
-          className="restart-btn"
-          onClick={() => {
-            if (confirm('Reset game? This will clear current progress and return to setup. Continue?')) {
-              localStorage.removeItem('clue-game')
-              const g = makeInitialGame()
-              setGame(g)
-              setInSetup(true)
-            }
-          }}
-          aria-label="Restart game"
-        >
-          Restart
-        </button>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <button className="btn" onClick={() => setInSetup(true)}>Setup</button>
+          <button
+            className="restart-btn"
+            onClick={() => {
+              if (confirm('Reset game? This will clear current progress and return to setup. Continue?')) {
+                localStorage.removeItem('clue-game')
+                const g = makeInitialGame()
+                setGame(g)
+                setInSetup(true)
+              }
+            }}
+            aria-label="Restart game"
+          >
+            Reset
+          </button>
+        </div>
       </header>
       {inSetup ? (
         <Setup game={game} onStart={(g) => { setGame(g); setInSetup(false) }} />

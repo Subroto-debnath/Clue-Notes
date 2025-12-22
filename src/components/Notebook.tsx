@@ -77,7 +77,6 @@ export default function Notebook({ game, setGame, backToSetup }: { game: GameSta
         <button onClick={() => setShowRevealed(true)}>Revealed</button>
         <button onClick={() => setShowAcquisition(true)}>New Acquisition</button>
         <button onClick={undoLast}>Undo</button>
-        <button onClick={backToSetup}>Setup</button>
       </div>
 
       <div className="cards-list">
@@ -127,11 +126,10 @@ export default function Notebook({ game, setGame, backToSetup }: { game: GameSta
       </div>
 
       <div className="actions-bottom">
-        <button className="primary" onClick={() => setShowSuggest(true)}>Suggest</button>
+        <button className="primary" onClick={() => setShowSuggest(true)}>New Suggestion</button>
         <button onClick={() => setShowRevealed(true)}>Revealed</button>
-        <button onClick={() => setShowAcquisition(true)}>Acquire</button>
+        <button onClick={() => setShowAcquisition(true)}>New Acquisition</button>
         <button onClick={undoLast}>Undo</button>
-        <button onClick={backToSetup}>Setup</button>
       </div>
 
       {showSuggest && <SuggestionModal game={game} onClose={() => setShowSuggest(false)} onSubmit={addSuggestion} />}

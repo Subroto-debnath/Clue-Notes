@@ -17,8 +17,8 @@ body { font-family: system-ui, sans-serif; margin:0; padding:0; -webkit-font-smo
 .modal-content { background:white; padding:16px; border-radius:12px; width:100%; max-width:700px; max-height:90vh; overflow:auto; box-shadow:0 10px 30px rgba(0,0,0,0.12) }
 .response-row { display:flex; gap:8px; align-items:center; margin:6px 0; flex-wrap:wrap }
 
-.actions-bottom { position:fixed; left:0; right:0; bottom:0; display:flex; gap:8px; padding:10px; background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff); box-shadow:0 -6px 20px rgba(0,0,0,0.06); justify-content:space-around }
-.actions-bottom button, .actions button { padding:12px 14px; border-radius:10px; font-size:15px; background:#fff; border:1px solid #e6e6e6; box-shadow:0 2px 8px rgba(0,0,0,0.04) }
+.actions-bottom { position:fixed; left:0; right:0; bottom:0; display:flex; gap:8px; padding:8px 10px; background:linear-gradient(180deg,rgba(255,255,255,0.95),#fff); box-shadow:0 -6px 20px rgba(0,0,0,0.06); justify-content:flex-start; overflow-x:auto }
+.actions-bottom button, .actions button { padding:10px 10px; border-radius:10px; font-size:14px; background:#fff; border:1px solid #e6e6e6; box-shadow:0 2px 8px rgba(0,0,0,0.04); min-width:96px; flex:0 0 auto }
 .actions-bottom button.primary, .actions button.primary { background:#2563eb; color:white; border-color:transparent }
 
 .card-done { background: #ff4d4d; color: white; border-color: #e63737; }
@@ -34,8 +34,8 @@ body { font-family: system-ui, sans-serif; margin:0; padding:0; -webkit-font-smo
 .btn.primary { background:#2563eb; color:#fff; border-color:transparent }
 
 @media (max-width: 640px) {
-	.grid { grid-template-columns: 1fr; }
-	.card-tile { padding:14px; min-height:88px }
+	.grid { grid-template-columns: repeat(2, 1fr); gap:8px }
+	.card-tile { padding:12px; min-height:72px }
 	.title { font-size:18px }
 	.modal-content { height:100%; border-radius:12px }
 	.actions { display:none }
