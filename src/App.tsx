@@ -43,7 +43,10 @@ export default function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <h1 className="title">Clue Notes</h1>
+        <div>
+          <h1 className="title">Clue Note</h1>
+          <p className="site-desc">Clue Note helps you record suggestions, reveals, and computes per-card probabilities during Clue games — mobile-first and privacy-focused.</p>
+        </div>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
           <button className="btn" onClick={() => setInSetup(true)}>Setup</button>
           <button

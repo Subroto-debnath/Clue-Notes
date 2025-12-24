@@ -1,4 +1,8 @@
-Clue Notes — mobile-friendly Clue notebook (MVP)
+Clue Note — mobile-friendly Clue notebook (MVP)
+
+Live demo: https://clue-note.vercel.app/
+
+Clue Note helps you record suggestions, reveals, and computes per-card probabilities during Clue games. Mobile-first and privacy-focused.
 
 Run locally:
 1. Install dependencies:
